@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the "Check the answers" button is clicked.
+     * This method is called when the "Check the answers" button is tapped.
      * It evaluates the answers and posts a toast message about the performance of the user.
      */
     public void checkAnswers(View view) {
