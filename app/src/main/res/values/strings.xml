@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Drifting Quiz</string>
+    <string name="welcome_message">Welcome to the Drifting Quiz!\nPlease type your name below!</string>
+    <string name="name">Name</string>
+
+    <string name="question_1_title">A car is said to be drifting when:</string>
+    <string name="question_1_answer_1">The rear slip angle is greater than the front slip angle, and the front wheels are pointing in the opposite direction to the turn</string>
+    <string name="question_1_answer_2">The front slip angle is greater than the rear slip angle, and the front wheels are pointing in the opposite direction to the turn</string>
+    <string name="question_1_answer_3">The rear slip angle is greater than the front slip angle, and the front wheels are pointing in the same direction to the turn</string>
+    <string name="question_1_answer_4">The rear slip angle is greater than the front slip angle, and the rear wheels are pointing in the opposite direction to the turn</string>
+
+    <string name="question_2_title">Which Motorcycling legend turned driver was the foremost creator of drifting techniques in the 1970s?</string>
+    <string name="question_2_answer_1">Daijiro Inada</string>
+    <string name="question_2_answer_2">Kunimitsu Takahashi</string>
+    <string name="question_2_answer_3">Keiichi Tsuchiya</string>
+    <string name="question_2_answer_4">Takashiki Nakamoro</string>
+
+    <string name="question_3_title">The top level drifting competition in Japan is called:</string>
+    <string name="question_3_answer_1">K1 Grand Prix</string>
+    <string name="question_3_answer_2">G1 Grand Prix</string>
+    <string name="question_3_answer_3">D1 Grand Prix</string>
+    <string name="question_3_answer_4">L1 Grand Prix</string>
+
+    <string name="question_4_title">Which drift-technique is done by swaying the car\'s weight back and forth on straight-aways, using counter steer and throttle to maintain a large angle?</string>
+    <string name="question_4_answer_1">Choku-Dori/Manji (Pendulum)</string>
+    <string name="question_4_answer_2">Shift lock (compression slide)</string>
+    <string name="question_4_answer_3">Power over steer or Power slide</string>
+    <string name="question_4_answer_4">Hand-brake drift</string>
+
+    <string name="question_5_title">Which drift-technique involves dropping the rear tires off the sealed road onto low-grip surface that borders the road to maintain or gain drift angle?</string>
+    <string name="question_5_answer_1">Clutch Kick</string>
+    <string name="question_5_answer_2">Dirt drop</string>
+    <string name="question_5_answer_3">Choku-Dori/Manji (Pendulum)</string>
+    <string name="question_5_answer_4">Kansei, Lift off, or Taking In</string>
+
+    <string name="question_6_title">Which ones of these are necessary for a drift-competition racecar?</string>
+    <string name="question_6_answer_1">High horsepower engine</string>
+    <string name="question_6_answer_2">Automatic transmission</string>
+    <string name="question_6_answer_3">Lambo-styled doors</string>
+    <string name="question_6_answer_4">Rear-wheel drive</string>
+
+    <string name="check_answers">Check the answers</string>
+    <string name="reset">Reset</string>
+    <string name="has_achieved">has achieved:</string>
+</resources>
