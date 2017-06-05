@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Drifting Quiz</string>
-    <string name="welcome_message">Welcome to the Drifting Quiz!\nPlease type your name below!</string>
-    <string name="name">Name</string>
+    <string name="welcome_message">Welcome to the Drifting Quiz!\nAn easy warmup question:\nWhat does DK stands for?</string>
+    <string name="name">Answer</string>
 
     <string name="question_1_title">A car is said to be drifting when:</string>
     <string name="question_1_answer_1">The rear slip angle is greater than the front slip angle, and the front wheels are pointing in the opposite direction to the turn</string>
@@ -41,5 +41,5 @@
 
     <string name="check_answers">Check the answers</string>
     <string name="reset">Reset</string>
-    <string name="has_achieved">has achieved:</string>
+    <string name="you_achieved">You achieved:</string>
 </resources>

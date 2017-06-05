@@ -22,7 +22,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/name_field"
+            android:id="@+id/warm_up_question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name" />
@@ -49,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/question_1"
+                android:layout_toRightOf="@+id/question_1"
                 android:padding="8dp"
                 android:text="@string/question_1_title"
                 android:textAllCaps="true"
@@ -125,6 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/question_2"
+                android:layout_toRightOf="@+id/question_2"
                 android:padding="8dp"
                 android:text="@string/question_2_title"
                 android:textAllCaps="true"
@@ -201,6 +203,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/question_3"
+                android:layout_toRightOf="@+id/question_3"
                 android:padding="8dp"
                 android:text="@string/question_3_title"
                 android:textAllCaps="true"
@@ -277,6 +280,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/question_4"
+                android:layout_toRightOf="@+id/question_4"
                 android:padding="8dp"
                 android:text="@string/question_4_title"
                 android:textAllCaps="true"
@@ -353,6 +357,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/question_5"
+                android:layout_toRightOf="@+id/question_5"
                 android:padding="8dp"
                 android:text="@string/question_5_title"
                 android:textAllCaps="true"
@@ -429,6 +434,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/question_6"
+                android:layout_toRightOf="@+id/question_6"
                 android:padding="8dp"
                 android:text="@string/question_6_title"
                 android:textAllCaps="true"
@@ -479,10 +485,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:onClick="checkAnswers"
         android:text="@string/check_answers"
-        android:textAllCaps="true"
-        android:layout_weight="1"/>
+        android:textAllCaps="true" />
 
     <!-- Button for resetting the quiz-->
 

@@ -21,7 +21,8 @@ import static com.example.android.driftingquiz.R.id.q6a3;
  */
 public class MainActivity extends AppCompatActivity {
 
-    String name = ""; //The name of the user
+    String warmUpQuestion = ""; //The answer for the warmUpQuestion
+    String correctAnswerForWarmUpQuestion = "DriftKing";
 
     int numberOfCorrectAnswers = 0;
     int numberOfCorrectCheckBox = 0;
@@ -50,15 +51,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void checkAnswers(View view) {
 
-        // Storing the name of the user to the "name" variable
-        EditText name_field = (EditText) findViewById(R.id.name_field);
-        name = name_field.getText().toString();
+        // Storing the answer of the warm up question to the "warmUpQuestion" variable
+        EditText warm_up_question = (EditText) findViewById(R.id.warm_up_question);
+        warmUpQuestion = warm_up_question.getText().toString();
 
         // Resetting the number of Correct Answers and CheckBoxes
         // This way the user can't increment his/her score by tapping on the Check Answers button
         numberOfCorrectAnswers = 0;
         numberOfCorrectCheckBox = 0;
 
+        checkWarmUpQuestion();
         checkQuestionOne(findViewById(R.id.question_1_rg));
         checkQuestionTwo(findViewById(R.id.question_2_rg));
         checkQuestionThree(findViewById(R.id.question_3_rg));
@@ -66,19 +68,26 @@ public class MainActivity extends AppCompatActivity {
         checkQuestionFive(findViewById(R.id.question_5_rg));
         checkQuestionSix();
 
-        //The app sets the number of correct CheckBoxes to zero if the user would get negative points.
-        if (numberOfCorrectCheckBox < 0) {
-            numberOfCorrectCheckBox = 0;
-        }
-
         //The performance of the User is calculated by Correct answers / Number of Answers * 100 to get a percentage.
-        int performanceOfUser = (numberOfCorrectAnswers + numberOfCorrectCheckBox) * 100 / 7;
+        int performanceOfUser = numberOfCorrectAnswers * 100 / 7;
 
         //The User gets a feedback for his/her performance by a Toast message.
-        String evaluationOfUser = name + " " + getString(R.string.has_achieved) + " " + performanceOfUser + "%";
+        String evaluationOfUser = getString(R.string.you_achieved) + " " + performanceOfUser + "%\nThe correct answer for the warm up question was DriftKing";
         Toast.makeText(this, evaluationOfUser, Toast.LENGTH_SHORT).show();
 
 
+    }
+
+    /**
+     * This method checks the answers for the warm up question.
+     * It compares the upper-case version of the correct answer, and the given answer,
+     * thus checking only the characters without casing.
+     */
+
+    public void checkWarmUpQuestion() {
+        if (warmUpQuestion.toUpperCase().equals(correctAnswerForWarmUpQuestion.toUpperCase())) {
+            numberOfCorrectAnswers++;
+        }
     }
 
     /**
@@ -87,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
      * If the User decides to modify his/her answers and tap on the Check Answers again without resetting them,
      * this method recolors the unselected RadioButtons background to white
      */
+
 
     public void checkQuestionOne(View view) {
 
@@ -499,7 +509,6 @@ public class MainActivity extends AppCompatActivity {
 
         q6a1Check = checkBox1.isChecked();
         if (q6a1Check) {
-            numberOfCorrectCheckBox++;
             checkBox1.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
             checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
 
@@ -510,7 +519,6 @@ public class MainActivity extends AppCompatActivity {
 
         q6a2Check = checkBox2.isChecked();
         if (q6a2Check) {
-            numberOfCorrectCheckBox--;
             checkBox1.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
             checkBox2.setBackgroundColor(ContextCompat.getColor(this, R.color.colorIncorrect));
             checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
@@ -521,7 +529,6 @@ public class MainActivity extends AppCompatActivity {
 
         q6a3Check = checkBox3.isChecked();
         if (q6a3Check) {
-            numberOfCorrectCheckBox--;
             checkBox1.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
             checkBox3.setBackgroundColor(ContextCompat.getColor(this, R.color.colorIncorrect));
             checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
@@ -532,12 +539,15 @@ public class MainActivity extends AppCompatActivity {
 
         q6a4Check = checkBox4.isChecked();
         if (q6a4Check) {
-            numberOfCorrectCheckBox++;
             checkBox1.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
             checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
 
         } else {
             checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorDefaultBackground));
+        }
+
+        if (q6a1Check && !q6a2Check && !q6a3Check && q6a4Check) {
+            numberOfCorrectAnswers++;
         }
     }
 
@@ -578,6 +588,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Resetting the variables
         numberOfCorrectAnswers = 0;
+        warmUpQuestion = "";
         questionOneAnswer = 0;
         questionTwoAnswer = 0;
         questionThreeAnswer = 0;
