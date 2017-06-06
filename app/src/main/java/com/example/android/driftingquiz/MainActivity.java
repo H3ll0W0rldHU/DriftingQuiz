@@ -507,21 +507,12 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkBox3 = (CheckBox) findViewById(q6a3);
         CheckBox checkBox4 = (CheckBox) findViewById(R.id.q6a4);
 
-        q6a1Check = checkBox1.isChecked();
-        if (q6a1Check) {
-            checkBox1.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
-            checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
-
-        } else {
-            checkBox1.setBackgroundColor(ContextCompat.getColor(this, R.color.colorDefaultBackground));
-        }
-
+        checkBox1.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
+        checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
 
         q6a2Check = checkBox2.isChecked();
         if (q6a2Check) {
-            checkBox1.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
             checkBox2.setBackgroundColor(ContextCompat.getColor(this, R.color.colorIncorrect));
-            checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
 
         } else {
             checkBox2.setBackgroundColor(ContextCompat.getColor(this, R.color.colorDefaultBackground));
@@ -529,21 +520,10 @@ public class MainActivity extends AppCompatActivity {
 
         q6a3Check = checkBox3.isChecked();
         if (q6a3Check) {
-            checkBox1.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
             checkBox3.setBackgroundColor(ContextCompat.getColor(this, R.color.colorIncorrect));
-            checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
 
         } else {
             checkBox3.setBackgroundColor(ContextCompat.getColor(this, R.color.colorDefaultBackground));
-        }
-
-        q6a4Check = checkBox4.isChecked();
-        if (q6a4Check) {
-            checkBox1.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
-            checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorCorrect));
-
-        } else {
-            checkBox4.setBackgroundColor(ContextCompat.getColor(this, R.color.colorDefaultBackground));
         }
 
         if (q6a1Check && !q6a2Check && !q6a3Check && q6a4Check) {
